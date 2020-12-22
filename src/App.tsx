@@ -1,47 +1,226 @@
 import React from 'react';
+import logo from './assets/logo.png'
+import cover from './assets/cover.png'
+import halfPercent from './assets/half-percent.png'
+import cardRight from './assets/card-right.png'
+import shape from './assets/shape.png'
+import gidLogo from './assets/gid-logo.png'
+import people from './assets/people.png'
+import bar from './assets/bar.png'
 
-function App() {
-  return (
-    <div className="flex flex-col h-full items-center justify-center text-white bg-gradient-to-br from-gray-600 via-teal-700 to-gray-800">
-      <div className="flex items-center animate-bounce">
-        <svg viewBox="0 0 64 64" className="w-32 fill-current text-indigo-500">
-          <path d="M52.275 22.147a63.008 63.008 0 0 0-2.025-.637c.112-.462.212-.925.313-1.387 1.537-7.45.524-13.437-2.888-15.412-3.287-1.888-8.65.075-14.075 4.8-.538.462-1.063.95-1.563 1.437-.337-.325-.687-.65-1.037-.962-5.688-5.05-11.387-7.175-14.8-5.188-3.275 1.9-4.25 7.537-2.875 14.587.138.7.288 1.388.463 2.088-.8.224-1.588.474-2.325.737C4.788 24.522 0 28.172 0 31.947c0 3.9 5.1 7.812 12.037 10.187.563.187 1.125.375 1.7.537a45.04 45.04 0 0 0-.5 2.25c-1.312 6.937-.287 12.437 2.988 14.324 3.375 1.95 9.05-.05 14.575-4.887.438-.387.875-.787 1.312-1.212.55.537 1.125 1.05 1.7 1.55 5.35 4.6 10.638 6.462 13.9 4.574 3.375-1.95 4.475-7.862 3.05-15.061a52.467 52.467 0 0 0-.374-1.688c.4-.112.787-.237 1.175-.362C58.775 39.772 64 35.909 64 31.947c0-3.787-4.925-7.462-11.725-9.8zM35.362 11.536c4.65-4.05 8.988-5.638 10.963-4.5 2.112 1.212 2.925 6.112 1.6 12.55a20.19 20.19 0 0 1-.287 1.249 63.994 63.994 0 0 0-8.413-1.325 63.153 63.153 0 0 0-5.325-6.637c.488-.463.962-.9 1.462-1.337zM20.9 38.434a86.067 86.067 0 0 0 1.975 3.237 56.605 56.605 0 0 1-5.8-.937c.55-1.8 1.238-3.662 2.038-5.562a82.583 82.583 0 0 0 1.787 3.262zm-3.787-15.037c1.8-.4 3.712-.725 5.7-.975a73.891 73.891 0 0 0-1.925 3.175 73.904 73.904 0 0 0-1.776 3.25 59.594 59.594 0 0 1-2-5.45zm3.425 8.612a78.537 78.537 0 0 1 2.674-5.074 75.374 75.374 0 0 1 3.05-4.863A78.408 78.408 0 0 1 32 21.86c1.95 0 3.875.075 5.737.212a87.325 87.325 0 0 1 3.038 4.838 85.138 85.138 0 0 1 2.712 5.05 82.936 82.936 0 0 1-2.7 5.1 85.374 85.374 0 0 1-3.024 4.874c-1.863.137-3.8.2-5.763.2-1.962 0-3.863-.063-5.7-.175a76.007 76.007 0 0 1-5.762-9.95zm22.574 6.4a86.342 86.342 0 0 0 1.825-3.337c.8 1.812 1.5 3.65 2.113 5.537-1.938.437-3.9.775-5.875 1a83.722 83.722 0 0 0 1.938-3.2zm1.8-9.562c-.587-1.1-1.187-2.2-1.812-3.275a81.255 81.255 0 0 0-1.913-3.15c2.013.25 3.938.588 5.738 1a55.315 55.315 0 0 1-2.012 5.425zM32.026 14.785a54.888 54.888 0 0 1 3.7 4.475 81.997 81.997 0 0 0-7.438 0 63.146 63.146 0 0 1 3.738-4.475zm-14.5-7.662c2.1-1.225 6.763.525 11.675 4.875.313.275.625.575.95.875a63.504 63.504 0 0 0-5.362 6.637c-2.826.25-5.625.688-8.4 1.3-.163-.637-.3-1.287-.438-1.937-1.175-6.05-.4-10.612 1.575-11.75zm-3.062 32.949a31.894 31.894 0 0 1-1.55-.488c-2.663-.837-5.688-2.162-7.876-3.9a5.609 5.609 0 0 1-2.35-3.737c0-2.287 3.95-5.212 9.65-7.2.713-.25 1.438-.475 2.163-.687a66.462 66.462 0 0 0 3.063 7.95 68.322 68.322 0 0 0-3.1 8.062zM29.038 52.32a22.88 22.88 0 0 1-7.05 4.412 5.533 5.533 0 0 1-4.413.163c-1.987-1.15-2.813-5.563-1.688-11.5.138-.7.288-1.4.463-2.087 2.8.6 5.625 1.012 8.487 1.225a65.963 65.963 0 0 0 5.4 6.674c-.4.388-.8.763-1.2 1.113zm3.062-3.037a59.114 59.114 0 0 1-3.788-4.538c1.2.05 2.438.075 3.688.075 1.288 0 2.55-.025 3.8-.087a53.904 53.904 0 0 1-3.7 4.55zm16.337 3.75a5.555 5.555 0 0 1-2.062 3.912c-1.987 1.15-6.225-.35-10.8-4.275-.525-.45-1.05-.938-1.588-1.438a61.833 61.833 0 0 0 5.276-6.7 61.623 61.623 0 0 0 8.525-1.312c.125.513.237 1.025.337 1.525.612 2.7.712 5.512.313 8.287zm2.276-13.437c-.35.112-.7.225-1.063.325a63.494 63.494 0 0 0-3.188-7.975 63.177 63.177 0 0 0 3.063-7.862c.65.187 1.275.387 1.875.587 5.825 2 9.913 4.975 9.913 7.25 0 2.45-4.363 5.612-10.6 7.675zM32 37.722a5.724 5.724 0 0 0 5.725-5.725A5.724 5.724 0 0 0 32 26.272a5.724 5.724 0 0 0-5.725 5.725A5.724 5.724 0 0 0 32 37.722z" />
-        </svg>
-        <span className="text-6xl pl-5 pr-2">+</span>
-        <svg
-          className="w-32 fill-current text-indigo-500"
-          viewBox="0 0 64 64"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M13.5 11.1C15.3 3.9 19.8.3 27 .3c10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 27.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
-            transform="translate(5 16)"
-          ></path>
-        </svg>
+function App () {
+  return (<div className="relative bg-white overflow-hidden">
+    <div className=" mx-auto ml-24">
+      <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8 absolute top-0 right-0  font-bold m-8">
+        <a href="#" className="  hover:text-gray-900">About GlobalId</a>
+
+        <span className=" font-normal text-3xl">|</span>
+        <a href="#" className="  hover:text-gray-900 border-2 rounded-full border-black px-8 py-2">Connect</a>
       </div>
-      <p className="mt-6 tracking-wide">
-        Edit <code>src/App.jsx</code> and save to reload.
-      </p>
-      <div className="mt-4 flex justify-center">
-        <a
-          className="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <a
-          className="ml-4 bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded"
-          href="https://tailwindcss.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Tailwind
-        </a>
+      <div className="flex flex-row">
+        <div className="mt-20">
+          <a href="#">
+            <img className="h-64 w-auto " src={logo} />
+          </a>
+          <span className="ml-8 text-gray-500">The official BLM Group</span>
+        </div>
+        <div className="lg:absolute w-48  mt-28 lg:right-0 lg:w-1/2">
+          <img className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src={cover} alt="" />
+        </div>
+      </div>
+      <div className="z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+          <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
+            <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
+              <div className="flex items-center justify-between w-full md:w-auto">
+                <div className="-mr-2 flex items-center md:hidden">
+                  <button type="button"
+                          className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                          id="main-menu" aria-haspopup="true">
+                    <span className="sr-only">Open main menu</span>
+                    <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+        <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+          <div className="sm:text-center lg:text-left">
+            <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+            <span className="block xl:inline">
+              Put your money
+where your heart is.
+              </span>
+            </h1>
+
+            <div className="mt-5 sm:mt-8 flex justify-center flex-col ">
+              <div className="rounded-full shadow w-96 ">
+                <a href="#" style={{ backgroundColor: '#0D51FF' }}
+                   className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white  hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                  Join the BLM Group Waitlist
+                </a>
+              </div>
+              <div className="ml-12 mt-5 text-gray-500 flex ">
+                <div className="mt-2 text-lg">
+
+                  <span>Empowered by </span>
+                </div>
+                <div className="ml-2">
+                  <img className="h-12 w-auto " src={gidLogo} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
       </div>
     </div>
-  );
-}
+    <div className="text-6xl  flex-col text-center  mx-auto">
+      <div className="mt-36 place-self-center margin-auto font-extrabold">
+        <span>One Group. The Power of Many.</span>
+      </div>
+      <div className="mt-24 w-7/12 place-self-center mx-auto  text-3xl">
 
-export default App;
+        <div>
+          <span>Join the movement to fight for Freedom, Liberation and Justice.</span>
+        </div>
+        <span className="font-bold">
+Take action by supporting our work within the privacy-enabled group.
+Get your BLM Card and 0.5% of all your spending goes back to the group.
+        </span>
+        <div>
+
+        <span>
+The BLM Group allows you to do all that. And more.
+        </span>
+        </div>
+      </div>
+      <div className="mt-16 place-self-center margin-auto font-extrabold">
+        <span>Reach One Goal to Support Millions.</span>
+      </div>
+      <div className="mt-24 w-6/12 place-self-center mx-auto  text-3xl">
+
+        <div>
+We need <span className="font-bold">500 members</span> to start the BLM Group. Once the member goal is reached,
+          <span className="font-bold"> a sum of $1,000 will be donated to the cause</span> by GlobaliD, our trust-partner enabling the BLM Group.
+
+
+        </div>
+          <div>
+          </div>
+        <img className="h-12 w-auto my-24" src={bar} />
+        <div className="mt-5 sm:mt-8 flex justify-center flex-col w-full ">
+          <div className="rounded-full shadow w-96 mx-auto">
+            <a href="#" style={{ backgroundColor: '#0D51FF' }}
+               className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white  hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+              Join the BLM Group Waitlist
+            </a>
+          </div>
+          <div className="mt-5 text-gray-500 flex  mx-auto">
+            <div className="mt-2 text-lg">
+
+              <span>Empowered by </span>
+            </div>
+            <div className="ml-2">
+              <img className="h-12 w-auto " src={gidLogo} />
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+      <div className="mt-16 place-self-center margin-auto font-extrabold ">
+        <span>How your BLM card helps support the Group’s cause</span>
+
+      </div>
+      <div className=" flex mt-24 flex-1">
+        <div className=" flex-1 ml-44">
+
+          <img className="h-96 w-auto " src={halfPercent} />
+        </div>
+        <div className="text-4xl w-1/3 mt-12 mr-8">
+          <span className="font-bold">Put your money where your heart is </span>
+0.5% of all your spending goes back to the Group. With raised funds we fight to end State-sanctioned violence, liberate Black people, and end white supremacy forever.
+        </div>
+        <div className="inset-y-0 right-0">
+          <img className="h-96 w-auto " src={cardRight} />
+        </div>
+      </div>
+      </div>
+      <div className="bg-gray-100 w-full  mt-24 p-24">
+
+        <div className="mt-24 place-self-center margin-auto font-extrabold text-6xl text-center">
+          <span>Connect, get updates, and transact safely.</span>
+
+        </div>
+       <div className="flex mt-24 items-center">
+
+        <div className="flex-col text-center w-3/4">
+          <div>
+
+            <img className="" src={shape} />
+          </div>
+          <div>
+          <span className="text-2xl font-bold">Share opinions and docs privately</span>
+          </div>
+          <div className="w-1/2 text-xl mx-auto text-gray-600 mt-8 leading-loose">
+          <span>The BLM Group allows you to say what you have to say, exchange important documents and get verified updates </span>
+          </div>
+        </div>
+         <div className="flex-col text-center w-3/4">
+           <div>
+
+             <img className="" src={shape} />
+           </div>
+           <div>
+             <span className="text-2xl font-bold">Connect with Group Members</span>
+           </div>
+           <div className="w-1/2 text-xl mx-auto text-gray-600 mt-8 leading-loose">
+             <span>Connect and interact with other members in the BLM group;  use messages, video chat, or transact safely</span>
+           </div>
+         </div>
+         <div className="flex-col text-center w-3/4">
+           <div>
+
+             <img className="" src={shape} />
+           </div>
+           <div>
+             <span className="text-2xl font-bold">Build your GlobaliD Identity</span>
+           </div>
+           <div className="w-1/2 text-xl mx-auto text-gray-600 mt-8 leading-loose">
+             <span>Claim your GlobaliD and be in control of your identity;  easily communicate and engage with people in a trusted way. <a href="#" className="text-blue-800 font-bold">Learn more.</a></span>
+           </div>
+         </div>
+       </div>
+      </div>
+      <div className="w-full mt-24 p-24 text-center">
+        <span className="text-5xl">Join Jerry Diego and others to reach the 500 BLM Group member goal</span>
+        <img className=" mx-auto mt-8" src={people} />
+      </div>
+      <div className="mt-5 sm:mt-8 flex justify-center flex-col w-full ">
+        <div className="rounded-full shadow w-96 mx-auto">
+          <a href="#" style={{ backgroundColor: '#0D51FF' }}
+             className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white  hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+            Join the BLM Group Waitlist
+          </a>
+        </div>
+        <div className="mt-5 text-gray-500 flex  mx-auto">
+          <div className="mt-2 text-lg">
+
+            <span>Empowered by </span>
+          </div>
+          <div className="ml-2">
+            <img className="h-12 w-auto " src={gidLogo} />
+          </div>
+        </div>
+      </div>
+
+      <div className="mb-48"></div>
+    </div>
+    );
+    }
+
+    export default App;
